@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" class="font-roboto scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets//favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Florent Chauvin : Psychologue clinicien, Cergy</title>
+  </head>
+  <body>
+    <div id="root" class="bg-zinc-50"></div>
+    <div id="modal-container"></div>
+
+    <form
+      name="contact"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="text" id="lastName" name="Nom" />
+      <input type="text" id="firstName" name="Prénom" />
+      <input type="email" id="email" name="E-mail" />
+      <textarea id="message" name="Message"></textarea>
+    </form>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
