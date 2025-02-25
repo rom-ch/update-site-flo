@@ -10,8 +10,6 @@ export function Header({ setIsModalFormOpen }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    console.log(window.innerWidth);
-
     if (isMenuOpen && window.innerWidth < 1024) {
       lockScroll();
     } else {

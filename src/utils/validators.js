@@ -1,4 +1,4 @@
-export function checkLastName(name) {
+function checkLastname(name) {
   const errors = [];
 
   if (name.length === 0) {
@@ -8,7 +8,7 @@ export function checkLastName(name) {
   return errors;
 }
 
-export function checkFirstName(name) {
+function checkFirstname(name) {
   const errors = [];
 
   if (name.length === 0) {
@@ -18,7 +18,7 @@ export function checkFirstName(name) {
   return errors;
 }
 
-export function checkEmail(email) {
+function checkEmail(email) {
   const errors = [];
 
   if (email.length === 0) {
@@ -32,7 +32,7 @@ export function checkEmail(email) {
   return errors;
 }
 
-export function checkMessage(message) {
+function checkMessage(message) {
   const errors = [];
 
   if (message.length === 0) {
@@ -40,4 +40,13 @@ export function checkMessage(message) {
   }
 
   return errors;
+}
+
+export function validateForm(values) {
+  return {
+    lastname: checkLastname(values.lastname),
+    firstname: checkFirstname(values.firstname),
+    email: checkEmail(values.email),
+    message: checkMessage(values.message),
+  };
 }

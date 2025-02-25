@@ -7,14 +7,6 @@ export function CustomModal({ isOpen, onClose, children }) {
   const { lockScroll, unlockScroll } = useOverflow();
 
   useEffect(() => {
-    if (isOpen) {
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-      }, 10);
-    }
-  }, [isOpen]);
-
-  useEffect(() => {
     function handler(e) {
       if (e.key === "Escape") onClose();
     }
@@ -29,22 +21,33 @@ export function CustomModal({ isOpen, onClose, children }) {
     } else {
       unlockScroll();
     }
+
+    return () => unlockScroll();
   }, [isOpen, lockScroll, unlockScroll]);
+
+  if (!isOpen) return null;
 
   return createPortal(
     <div
-      className={`absolute inset-0 z-100 bg-black/50 backdrop-blur-xs ${isOpen ? "block" : "hidden"}`}
+      onClick={onClose}
+      className="fixed top-0 left-0 z-1000 flex h-screen w-screen items-center justify-center bg-black/50"
     >
-      <button
-        onClick={onClose}
-        className="absolute top-4 right-4 cursor-pointer rounded text-5xl text-zinc-50 focus:ring-2 focus:ring-emerald-700/80 focus:outline-none"
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="max-h-[95%] w-full overflow-y-auto p-4"
       >
-        <IoClose />
-      </button>
-      <div className="absolute top-1/2 left-1/2 z-10 -translate-1/2">
         {children}
       </div>
     </div>,
     document.querySelector("#modal-container"),
   );
+}
+
+{
+  /* <button
+  onClick={onClose}
+  className="absolute top-4 right-4 cursor-pointer rounded text-5xl text-zinc-50 focus:ring-2 focus:ring-emerald-700/80 focus:outline-none"
+>
+  <IoClose />
+</button>; */
 }

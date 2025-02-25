@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AppointmentAndPriceSection } from "./components/AppointmentAndPriceSection";
 import { ContactForm } from "./components/ContactForm";
 import { CustomModal } from "./components/CustomModal";
@@ -11,7 +11,18 @@ import { WebsitesCards } from "./components/WebsitesCards";
 
 function App() {
   const [isModalFormOpen, setIsModalFormOpen] = useState(false);
-  const [isModalFormSuccessOpen, setIsModalFormSuccessOpen] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (formSubmitted) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      const timer = setTimeout(() => {
+        setFormSubmitted(false);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [formSubmitted]);
 
   return (
     <>
@@ -35,16 +46,11 @@ function App() {
         onClose={() => setIsModalFormOpen(false)}
       >
         <ContactForm
-          setIsModalFormSuccessOpen={setIsModalFormSuccessOpen}
+          setFormSubmitted={setFormSubmitted}
           onClose={() => setIsModalFormOpen(false)}
         />
       </CustomModal>
-      <CustomModal
-        isOpen={isModalFormSuccessOpen}
-        onClose={() => isModalFormSuccessOpen(false)}
-      >
-        <FormSuccessMessage onClose={() => setIsModalFormSuccessOpen(false)} />
-      </CustomModal>
+      {formSubmitted && <FormSuccessMessage />}
     </>
   );
 }
