@@ -57,4 +57,6 @@ function App() {
 export default App;
 
 // mobile: when nav open when scrolled, can scroll down and see content
-// try cut paragraph with read more
+// Form
+// message success on mobile
+// success message in modal

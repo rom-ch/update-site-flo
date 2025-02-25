@@ -1,12 +1,9 @@
-import { useState } from "react";
 import adoImg from "../assets/ado.webp";
 import adulteImg from "../assets/adulte.webp";
 import enfantImg from "../assets/enfant.webp";
 import { PratiqueParagraph } from "./PratiqueParagraph";
 
 export function PratiqueSection() {
-  // const [showParagraph, setShowParagraph] = useState(false);
-
   return (
     <section id="ma-pratique" className="my-8 space-y-6">
       <h2 className="px-8 text-center text-2xl font-semibold text-emerald-950 md:mb-8 md:text-3xl">

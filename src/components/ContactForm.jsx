@@ -77,7 +77,7 @@ export function ContactForm({ onClose, setFormSubmitted }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-2xl rounded-2xl bg-zinc-50 p-6 sm:mx-auto sm:p-10"
+      className="w-[90vw] max-w-2xl rounded-2xl bg-zinc-50 p-6 sm:mx-auto sm:p-10"
     >
       <h1 className="mb-8 text-2xl font-bold text-emerald-950 sm:text-3xl">
         Me contacter
@@ -88,7 +88,6 @@ export function ContactForm({ onClose, setFormSubmitted }) {
             Nom
           </Label>
           <InputText
-            autofocus
             type="text"
             id="lastname"
             name="Nom"
