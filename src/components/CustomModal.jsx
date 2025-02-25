@@ -34,11 +34,11 @@ export function CustomModal({ isOpen, onClose, children }) {
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
-      className="fixed top-0 left-0 z-1000 flex h-screen w-screen items-center justify-center bg-black/50"
+      className="fixed inset-0 z-1000 flex h-screen w-screen items-center justify-center overflow-y-auto bg-black/50"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-h-svh overflow-y-auto"
+        // className="max-h-svh overflow-y-auto"
       >
         {/* <button
           onClick={onClose}
