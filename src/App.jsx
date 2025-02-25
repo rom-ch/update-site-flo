@@ -56,9 +56,6 @@ function App() {
 }
 export default App;
 
-// Bouton close modal
-// on mobile, bar in the bottom hides the form
-// modal: the div dont allow to click on the overlay to close the modal
 // on mobile address button to open app directly
 // mobile: when nav open when scrolled, can scroll down and see content
 // try cut paragraph with read more

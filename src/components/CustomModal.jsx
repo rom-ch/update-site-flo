@@ -34,20 +34,17 @@ export function CustomModal({ isOpen, onClose, children }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-h-[95svh] overflow-y-auto p-4"
+        className="relative max-h-[95svh] overflow-y-auto p-4"
       >
-        {children}
+        <button
+          onClick={onClose}
+          className="absolute -top-2 right-0 cursor-pointer rounded text-5xl text-zinc-50 hover:text-emerald-600 focus:ring-2 focus:ring-emerald-700/80 focus:outline-none"
+        >
+          <IoClose />
+        </button>
+        ;{children}
       </div>
     </div>,
     document.querySelector("#modal-container"),
   );
-}
-
-{
-  /* <button
-  onClick={onClose}
-  className="absolute top-4 right-4 cursor-pointer rounded text-5xl text-zinc-50 focus:ring-2 focus:ring-emerald-700/80 focus:outline-none"
->
-  <IoClose />
-</button>; */
 }

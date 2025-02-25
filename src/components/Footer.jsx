@@ -1,6 +1,7 @@
 import { FaPhone } from "react-icons/fa6";
 import { HiExternalLink } from "react-icons/hi";
 import { IoMail } from "react-icons/io5";
+import { MapLink } from "./MapLink";
 
 export function Footer() {
   return (
@@ -15,14 +16,10 @@ export function Footer() {
         <h4 className="mb-2 text-lg font-semibold text-emerald-950 md:text-end">
           Contacts :
         </h4>
-        <a
-          href="https://maps.app.goo.gl/F2JYaEpxvJNSuP418"
-          target="_blank"
-          className="mb-4 block rounded leading-6 decoration-emerald-950 hover:underline hover:underline-offset-2 focus:ring-2 focus:ring-emerald-700/80 focus:outline-none md:text-end"
-        >
+        <MapLink className="mb-4 block rounded leading-6 decoration-emerald-950 hover:underline hover:underline-offset-2 focus:ring-2 focus:ring-emerald-700/80 focus:outline-none md:text-end">
           <p>8 rue du Ponceau</p>
           <p>95000 Cergy</p>
-        </a>
+        </MapLink>
         <a
           href="tel:+330754388842"
           className="mb-1 flex items-center justify-center gap-2 rounded decoration-emerald-950 hover:underline hover:underline-offset-2 focus:ring-2 focus:ring-emerald-700/80 focus:outline-none md:justify-end"

@@ -88,6 +88,7 @@ export function ContactForm({ onClose, setFormSubmitted }) {
             Nom
           </Label>
           <InputText
+            autofocus
             type="text"
             id="lastname"
             name="Nom"

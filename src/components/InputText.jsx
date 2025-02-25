@@ -5,11 +5,11 @@ export function InputText({
   onChange,
   value,
   errors,
+  autofocus,
 }) {
-  console.log(errors);
-
   return (
     <input
+      autoFocus={autofocus}
       type={type}
       id={id}
       name={name}
