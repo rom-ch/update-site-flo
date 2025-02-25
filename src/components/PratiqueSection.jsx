@@ -1,8 +1,12 @@
+import { useState } from "react";
 import adoImg from "../assets/ado.webp";
 import adulteImg from "../assets/adulte.webp";
 import enfantImg from "../assets/enfant.webp";
+import { PratiqueParagraph } from "./PratiqueParagraph";
 
 export function PratiqueSection() {
+  // const [showParagraph, setShowParagraph] = useState(false);
+
   return (
     <section id="ma-pratique" className="my-8 space-y-6">
       <h2 className="px-8 text-center text-2xl font-semibold text-emerald-950 md:mb-8 md:text-3xl">
@@ -17,7 +21,7 @@ export function PratiqueSection() {
               alt="Photo d'une enfant jouant avec des bulles"
             />
           </div>
-          <div className="max-w-6xl space-y-2 px-6 sm:px-8">
+          <PratiqueParagraph>
             <h3 className="text-lg font-semibold">Enfants</h3>
             <p className="text-justify">
               Que l&apos;enfant ait des difficultés dans l&apos;alimentation, la
@@ -41,7 +45,7 @@ export function PratiqueSection() {
               parents (ou l&apos;un des deux) lorsqu&apos;il faut travailler sur
               la dynamique familiale ou conseiller sur des notions éducatives.
             </p>
-          </div>
+          </PratiqueParagraph>
         </div>
         <div className="space-y-4 xl:mx-auto">
           <div className="clip-right md:clip-md-right h-60 w-full sm:h-72 md:float-right md:h-[400px] md:w-96 lg:w-2xl">
@@ -51,7 +55,7 @@ export function PratiqueSection() {
               alt="Photo d'un adolescent appuyé sur un mur"
             />
           </div>
-          <div className="max-w-6xl space-y-2 px-6 sm:px-8">
+          <PratiqueParagraph>
             <h3 className="text-lg font-semibold">Adolescents</h3>
             <p className="text-justify">
               La période de l&apos;adolescence peut s&apos;avérer compliquée
@@ -73,7 +77,7 @@ export function PratiqueSection() {
               faire sur eux-mêmes devient très intéressant. Dans la majorité des
               cas, les parents se sentent démunis face à leur enfant.
             </p>
-          </div>
+          </PratiqueParagraph>
         </div>
         <div className="space-y-4 xl:mx-auto">
           <div className="clip-left md:clip-md-left h-60 w-full sm:h-72 md:float-left md:h-[400px] md:w-96 lg:w-2xl">
@@ -83,7 +87,7 @@ export function PratiqueSection() {
               alt="Photo d'un homme assis"
             />
           </div>
-          <div className="max-w-6xl space-y-2 px-6 sm:px-8">
+          <PratiqueParagraph>
             <h3 className="text-lg font-semibold">Adultes</h3>
             <p className="text-justify">
               Les adultes qui viennent en consultation ressentent souvent une
@@ -103,7 +107,7 @@ export function PratiqueSection() {
               Pour certains, cette connexion peut se faire rapidement mais le
               travail se déroule en général sur plusieurs mois.
             </p>
-          </div>
+          </PratiqueParagraph>
         </div>
       </div>
     </section>

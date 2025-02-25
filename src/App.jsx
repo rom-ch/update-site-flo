@@ -56,6 +56,5 @@ function App() {
 }
 export default App;
 
-// on mobile address button to open app directly
 // mobile: when nav open when scrolled, can scroll down and see content
 // try cut paragraph with read more
