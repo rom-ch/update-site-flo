@@ -5,7 +5,7 @@ import { PratiqueParagraph } from "./PratiqueParagraph";
 
 export function PratiqueSection() {
   return (
-    <section id="ma-pratique" className="my-8 space-y-6">
+    <section id="ma-pratique" className="my-8 space-y-6 overflow-hidden">
       <h2 className="px-8 text-center text-2xl font-semibold text-emerald-950 md:mb-8 md:text-3xl">
         Ma pratique
       </h2>
