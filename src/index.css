@@ -25,3 +25,7 @@
   shape-outside: polygon(50% 0px, 100% 0px, 100% 100%, 25% 100%);
   shape-margin: 2rem;
 }
+
+.padding-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}

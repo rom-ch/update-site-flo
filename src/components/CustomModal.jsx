@@ -34,19 +34,19 @@ export function CustomModal({ isOpen, onClose, children }) {
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
-      className="fixed inset-0 z-1000 flex h-screen w-screen items-center justify-center overflow-y-auto bg-black/50"
+      className="fixed inset-0 z-1000 flex justify-center overflow-y-auto bg-black/50"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        // className="max-h-svh overflow-y-auto"
+        className="safe-padding relative mx-4 mt-12 h-fit max-h-dvh w-full max-w-[400px] overflow-y-auto rounded-xl bg-zinc-50 p-6 sm:mx-10 sm:max-w-xl"
       >
-        {/* <button
+        <button
           onClick={onClose}
           aria-label="Fermer la modal"
-          className="absolute -top-2 right-0 cursor-pointer rounded text-5xl text-zinc-50 hover:text-emerald-600 focus:ring-2 focus:ring-emerald-700/80 focus:outline-none"
+          className="absolute top-6 right-6 cursor-pointer rounded text-4xl text-emerald-950 hover:text-emerald-600 focus:ring-2 focus:ring-emerald-700/80 focus:outline-none"
         >
           <IoClose />
-        </button> */}
+        </button>
         {children}
       </div>
     </div>,
