@@ -20,6 +20,7 @@ export function MapLink({ children, className }) {
       onClick={handleClick}
       className={className}
     >
+      {navigator.userAgent}
       {children}
     </a>
   );
