@@ -38,7 +38,7 @@ function App() {
         <WebsitesCards />
       </div>
 
-      {/* <PratiqueSection /> */}
+      <PratiqueSection />
       <AppointmentAndPriceSection />
       <Footer />
       <CustomModal
