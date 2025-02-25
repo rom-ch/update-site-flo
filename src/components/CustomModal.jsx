@@ -38,7 +38,7 @@ export function CustomModal({ isOpen, onClose, children }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-h-[95svh] overflow-y-auto"
+        className="max-h-dvh overflow-y-auto"
       >
         {/* <button
           onClick={onClose}
