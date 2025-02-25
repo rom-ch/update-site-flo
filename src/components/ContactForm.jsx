@@ -71,16 +71,12 @@ export function ContactForm({ onClose, setFormSubmitted }) {
     }
   }
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-
   return (
     <form
       onSubmit={handleSubmit}
       className="w-[90vw] max-w-2xl rounded-2xl bg-zinc-50 p-6 sm:mx-auto sm:p-10"
     >
-      <h1 className="mb-8 text-2xl font-bold text-emerald-950 sm:text-3xl">
+      <h1 className="mb-6 text-2xl font-bold text-emerald-950 sm:mb-8 sm:text-3xl">
         Me contacter
       </h1>
       <div className="flex flex-col items-center justify-between sm:flex-row sm:gap-4">
@@ -147,7 +143,7 @@ export function ContactForm({ onClose, setFormSubmitted }) {
           id="message"
           value={formValues.message}
           onChange={handleChangeValue}
-          className={`flex h-56 resize-none items-center gap-3 rounded-lg px-6 py-2.5 text-lg ring ring-emerald-950 focus:outline-none sm:h-28 ${errors.message?.length > 0 ? "bg-red-50 ring-red-700" : "focus:bg-emerald-200/10 focus:ring-emerald-700"}`}
+          className={`flex h-48 resize-none items-center gap-3 rounded-lg px-6 py-2.5 text-lg ring ring-emerald-950 focus:outline-none sm:h-28 ${errors.message?.length > 0 ? "bg-red-50 ring-red-700" : "focus:bg-emerald-200/10 focus:ring-emerald-700"}`}
         />
         {errors.message?.length > 0 && <ErrorMessage errors={errors.message} />}
       </FormGroup>
