@@ -34,7 +34,7 @@ export function CustomModal({ isOpen, onClose, children }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-h-[95%] w-full overflow-y-auto p-4"
+        className="max-h-[95svh] overflow-y-auto p-4"
       >
         {children}
       </div>
