@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { validateForm } from "../utils/validators";
 import { Button } from "./Button";
 import { ErrorMessage } from "./ErrorMessage";
@@ -63,6 +63,7 @@ export function ContactForm({ onClose, setFormSubmitted }) {
       // });
 
       setFormValues(INITIAL_VALUES);
+      setErrors({});
       setIsAfterFirstSubmit(false);
 
       onClose();
@@ -70,9 +71,9 @@ export function ContactForm({ onClose, setFormSubmitted }) {
     }
   }
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <form
@@ -88,7 +89,6 @@ export function ContactForm({ onClose, setFormSubmitted }) {
             Nom
           </Label>
           <InputText
-            type="text"
             id="lastname"
             name="Nom"
             errors={errors.lastname}
@@ -104,7 +104,6 @@ export function ContactForm({ onClose, setFormSubmitted }) {
             Prénom
           </Label>
           <InputText
-            type="text"
             id="firstname"
             name="Prénom"
             errors={errors.firstname}
@@ -121,7 +120,7 @@ export function ContactForm({ onClose, setFormSubmitted }) {
           E-mail
         </Label>
         <InputText
-          type="text"
+          type="email"
           id="email"
           name="E-mail"
           errors={errors.email}
@@ -133,7 +132,6 @@ export function ContactForm({ onClose, setFormSubmitted }) {
       <FormGroup>
         <Label htmlFor="object">Objet</Label>
         <InputText
-          type="text"
           id="object"
           name="Objet"
           value={formValues.object}
