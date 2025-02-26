@@ -38,12 +38,12 @@ export function CustomModal({ isOpen, onClose, children }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="safe-padding absolute top-1/2 mx-4 mt-8 h-fit max-h-dvh w-full max-w-[400px] -translate-y-1/2 overflow-y-auto rounded-xl bg-zinc-50 p-6 sm:mx-10 sm:max-w-xl"
+        className="safe-padding absolute top-1/2 h-fit max-h-dvh w-[90%] max-w-[400px] -translate-y-1/2 overflow-y-auto rounded-xl bg-zinc-50 p-6 sm:mx-10 sm:max-w-xl"
       >
         <button
           onClick={onClose}
           aria-label="Fermer la modal"
-          className="absolute top-6 right-6 cursor-pointer rounded text-4xl text-emerald-950 hover:text-emerald-600 focus:ring-2 focus:ring-emerald-700/80 focus:outline-none"
+          className="absolute top-6 right-6 cursor-pointer rounded text-4xl text-emerald-950 hover:text-emerald-700 focus:ring-2 focus:ring-emerald-700/80 focus:outline-none"
         >
           <IoClose />
         </button>

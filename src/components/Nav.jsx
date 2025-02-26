@@ -8,6 +8,14 @@ export function Nav({ isMenuOpen, setIsMenuOpen, setIsModalFormOpen }) {
   const navRef = useRef(null);
 
   useEffect(() => {
+    if (isMenuOpen) {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 5);
+    }
+  }, [isMenuOpen]);
+
+  useEffect(() => {
     function handleClickOutsiteNav(e) {
       if (navRef.current && !navRef.current.contains(e.target)) {
         setIsMenuOpen(false);

@@ -50,13 +50,16 @@ function App() {
           onClose={() => setIsModalFormOpen(false)}
         />
       </CustomModal>
-      {formSubmitted && <FormSuccessMessage />}
+
+      {formSubmitted && (
+        <CustomModal
+          isOpen={formSubmitted}
+          onClose={() => setFormSubmitted(false)}
+        >
+          <FormSuccessMessage />
+        </CustomModal>
+      )}
     </>
   );
 }
 export default App;
-
-// mobile: when nav open when scrolled, can scroll down and see content
-// Form
-// message success on mobile
-// success message in modal

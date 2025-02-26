@@ -5,10 +5,15 @@ import { PratiqueParagraph } from "./PratiqueParagraph";
 
 export function PratiqueSection() {
   return (
-    <section id="ma-pratique" className="my-8 space-y-6 overflow-hidden">
+    <section id="ma-pratique" className="my-12 space-y-6 overflow-hidden">
       <h2 className="px-8 text-center text-2xl font-semibold text-emerald-950 md:mb-8 md:text-3xl">
         Ma pratique
       </h2>
+      <p className="mx-auto my-8 flex max-w-4xl flex-col gap-8 px-8">
+        Vous trouverez dans cette section les différents motifs de consultation
+        possibles. J&apos;explique également, succinctement, ma manière de
+        travailler en fonction du public que je reçois.
+      </p>
       <div className="flex flex-col gap-8">
         <div className="space-y-4 xl:mx-auto">
           <div className="clip-left md:clip-md-left h-60 w-full sm:h-72 md:float-left md:h-[400px] md:w-96 lg:w-2xl">
