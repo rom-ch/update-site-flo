@@ -1,5 +1,6 @@
 export function Button({
   size = "md",
+  text = "md",
   disabled = false,
   width = "fit",
   children,
@@ -9,12 +10,18 @@ export function Button({
   type = "button",
 }) {
   const baseStyles =
-    "cursor-pointer rounded-lg font-medium bg-emerald-700 font-medium text-zinc-50 focus:ring-2 focus:ring-emerald-600/80 focus:ring-offset-2 focus:outline-none hover:bg-emerald-800";
+    "cursor-pointer rounded-md block font-medium bg-emerald-800 font-medium text-zinc-50  hover:bg-emerald-700 transition-transform duration-150 active:scale-95 hover:scale-105";
 
   const sizeStyle = {
-    sm: "px-3 py-1 text-sm",
-    md: "px-4 py-2 text-base",
-    lg: "px-6 py-3 text-lg",
+    sm: "px-3 py-1",
+    md: "px-4 py-2",
+    lg: "px-6 py-3",
+  };
+
+  const textStyle = {
+    sm: "text-sm",
+    md: "text-base",
+    lg: "text-lg",
   };
 
   const disabledStyles = disabled ? "opacity-50 cursor-not-allowed" : "";
@@ -25,7 +32,7 @@ export function Button({
 
   return (
     <button
-      className={`${baseStyles} ${sizeStyle[size]} ${disabledStyles} ${widthStyles[width]} ${className}`}
+      className={`${baseStyles} ${sizeStyle[size]} ${textStyle[text]} ${disabledStyles} ${widthStyles[width]} ${className}`}
       disabled={disabled}
       onClick={onClick}
       ref={ref}

@@ -3,6 +3,7 @@ import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import logo from "../assets/logo.webp";
 import { navLinks } from "../utils/navLinks";
+import { Button } from "./Button";
 import { NavItem } from "./NavItem";
 
 export function Nav() {
@@ -56,7 +57,7 @@ export function Nav() {
               className="absolute top-0 right-0 block cursor-pointer p-3 lg:hidden"
               aria-label="close navbar"
             >
-              <IoClose className="fill-gray-700 text-4xl hover:fill-gray-900" />
+              <IoClose className="fill-gray-700 text-4xl hover:fill-emerald-950" />
             </button>
           </li>
           <li className="my-4 lg:my-0 lg:mr-auto">
@@ -77,9 +78,9 @@ export function Nav() {
             <NavItem key={link.name} {...link} />
           ))}
           <li className="mt-8 text-center sm:text-start lg:mt-0">
-            <button className="mx-auto block cursor-pointer rounded-md bg-emerald-800 py-4 pr-8 pl-10 text-center font-medium text-zinc-50 transition-transform duration-100 hover:bg-emerald-700 focus:outline-none active:scale-95 sm:text-start lg:ml-4 lg:w-full lg:px-4 lg:text-center">
+            <Button size="lg" className="lg:ml-4">
               Me Contacter
-            </button>
+            </Button>
           </li>
         </ul>
       </nav>
