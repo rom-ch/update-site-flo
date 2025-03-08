@@ -1,12 +1,12 @@
-export function NavItem({ children, href, setIsMenuOpen }) {
+export function NavItem({ name, href, setIsSidebarOpen }) {
   return (
-    <li>
+    <li className="text-center sm:text-start">
       <a
-        className="block h-full w-full cursor-pointer rounded-md px-2 py-2 hover:bg-emerald-700/10 hover:text-black focus:ring-2 focus:ring-emerald-600/80 focus:outline-none"
+        onClick={() => setIsSidebarOpen(false)}
+        className="block py-4 pr-8 pl-10 font-medium text-gray-700 decoration-emerald-950 underline-offset-4 transition-colors duration-100 hover:text-emerald-950 hover:underline lg:px-4"
         href={href}
-        onClick={() => setIsMenuOpen(false)}
       >
-        {children}
+        {name}
       </a>
     </li>
   );

@@ -4,8 +4,8 @@ import { ContactForm } from "./components/ContactForm";
 import { CustomModal } from "./components/CustomModal";
 import { Footer } from "./components/Footer";
 import { FormSuccessMessage } from "./components/FormSuccessMessage";
-import { Header } from "./components/Header";
 import { HeroSection } from "./components/HeroSection";
+import { Nav } from "./components/Nav";
 import { PratiqueSection } from "./components/PratiqueSection";
 import { WebsitesCards } from "./components/WebsitesCards";
 
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <Header setIsModalFormOpen={setIsModalFormOpen} />
+      <Nav />
       <HeroSection setIsModalFormOpen={setIsModalFormOpen} />
 
       <div className="mx-auto my-8 flex max-w-4xl flex-col gap-8 px-8">
