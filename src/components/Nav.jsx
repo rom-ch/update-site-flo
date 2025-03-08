@@ -6,9 +6,14 @@ import { navLinks } from "../utils/navLinks";
 import { Button } from "./Button";
 import { NavItem } from "./NavItem";
 
-export function Nav() {
+export function Nav({ setIsModalFormOpen }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navRef = useRef();
+
+  function handleClickContactButton() {
+    setIsSidebarOpen(false);
+    setIsModalFormOpen(true);
+  }
 
   useEffect(() => {
     function handleEsc(e) {
@@ -75,10 +80,18 @@ export function Nav() {
             </a>
           </li>
           {navLinks.map((link) => (
-            <NavItem key={link.name} {...link} />
+            <NavItem
+              key={link.name}
+              {...link}
+              setIsSidebarOpen={setIsSidebarOpen}
+            />
           ))}
           <li className="mt-8 text-center sm:text-start lg:mt-0">
-            <Button size="lg" className="lg:ml-4">
+            <Button
+              size="lg"
+              className="lg:ml-4"
+              onClick={handleClickContactButton}
+            >
               Me Contacter
             </Button>
           </li>

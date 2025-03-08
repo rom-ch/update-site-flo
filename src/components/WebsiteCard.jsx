@@ -4,12 +4,12 @@ export function WebsiteCard({ link, name, logo }) {
       href={link}
       target="_blank"
       key={name}
-      className="flex h-[105px] w-[150px] flex-col items-center justify-center gap-2 rounded-lg bg-emerald-700/10 p-4 shadow-md ring-emerald-700/80 hover:ring focus:ring-2 focus:outline-none"
+      className="flex w-full shrink-0 items-center justify-center gap-2 rounded-lg border border-emerald-900/20 p-4 shadow-sm hover:bg-emerald-700/10 sm:w-auto"
     >
-      <div className="">
-        <img src={logo} alt={`Logo ${name}`} className="w-10" />
+      <div>
+        <img src={logo} alt={`Logo ${name}`} className="w-6" />
       </div>
-      <h4 className="font-semibold">{name}</h4>
+      <h4 className="font-medium">{name}</h4>
     </a>
   );
 }

@@ -15,7 +15,9 @@ export function HeroSection({ setIsModalFormOpen }) {
           Psychologue clinicien et psychothérapeute auprès des enfants, des
           adolescents et des adultes
         </p>
-        <Button onClick={() => setIsModalFormOpen(true)}>Me contacter</Button>
+        <Button className="lg:hidden" onClick={() => setIsModalFormOpen(true)}>
+          Me contacter
+        </Button>
       </div>
     </section>
   );

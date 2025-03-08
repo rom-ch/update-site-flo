@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <Nav />
+      <Nav setIsModalFormOpen={setIsModalFormOpen} />
       <HeroSection setIsModalFormOpen={setIsModalFormOpen} />
 
       <div className="mx-auto my-8 flex max-w-4xl flex-col gap-8 px-8">

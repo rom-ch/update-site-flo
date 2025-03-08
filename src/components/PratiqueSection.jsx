@@ -9,7 +9,7 @@ export function PratiqueSection() {
       <h2 className="px-8 text-center text-2xl font-semibold text-emerald-950 md:mb-8 md:text-3xl">
         Ma pratique
       </h2>
-      <p className="mx-auto my-8 flex max-w-4xl flex-col gap-8 px-8">
+      <p className="mx-auto my-8 flex max-w-4xl flex-col gap-8 px-8 text-justify">
         Vous trouverez dans cette section les différents motifs de consultation
         possibles. J&apos;explique également, succinctement, ma manière de
         travailler en fonction du public que je reçois.
