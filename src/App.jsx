@@ -35,11 +35,15 @@ function App() {
           consultation psychologique ainsi que l&apos;emplacement du cabinet et
           les tarifs de consultation.
         </p>
-        <WebsitesCards />
       </div>
 
       <PratiqueSection />
       <AppointmentAndPriceSection />
+
+      <div className="mx-auto my-8 flex max-w-4xl flex-col gap-8 px-8">
+        <WebsitesCards />
+      </div>
+
       <Footer />
       <CustomModal
         isOpen={isModalFormOpen}
