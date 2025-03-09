@@ -5,9 +5,9 @@ export function PratiqueParagraph({ children }) {
   const [showParagraph, setShowParagraph] = useState(false);
 
   return (
-    <div>
+    <>
       <div
-        className={`max-w-6xl space-y-2 ${showParagraph ? "line-clamp-none" : "line-clamp-6"} md:line-clamp-none`}
+        className={`max-w-6xl space-y-2 px-6 sm:px-8 ${showParagraph ? "line-clamp-none" : "line-clamp-6"} md:line-clamp-none`}
       >
         {children}
       </div>
@@ -27,6 +27,6 @@ export function PratiqueParagraph({ children }) {
           </>
         )}
       </button>
-    </div>
+    </>
   );
 }

@@ -6,12 +6,12 @@
   --font-bebas: "Bebas Neue", serif;
 }
 
-@utility clip-left {
-  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+@utility clip-right {
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
 }
 
-@utility clip-right {
-  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+@utility clip-left {
+  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 90%);
 }
 
 @utility clip-md-left {
