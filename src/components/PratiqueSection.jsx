@@ -9,50 +9,54 @@ export function PratiqueSection() {
       <h2 className="px-8 text-center text-2xl font-semibold text-emerald-950 md:mb-8 md:text-3xl">
         Ma pratique
       </h2>
-      <p className="mx-auto my-8 flex max-w-4xl flex-col gap-8 px-8 text-justify">
+      <p className="mx-auto my-8 flex max-w-4xl flex-col gap-8 px-6 text-justify">
         Vous trouverez dans cette section les différents motifs de consultation
         possibles. J&apos;explique également, succinctement, ma manière de
         travailler en fonction du public que je reçois.
       </p>
-      <div className="flex flex-col gap-8">
-        <div className="bg-gray-200 py-6 xl:flex">
-          <div className="space-y-4 md:mx-auto md:h-full md:space-y-0">
-            <div className="clip-left md:clip-md-left h-60 w-full sm:h-72 md:float-left md:h-[400px] md:w-96 lg:w-2xl">
-              <img
-                className="h-full w-full object-cover lg:-translate-x-12 lg:-translate-y-10"
-                src={enfantImg}
-                alt="Photo d'une enfant jouant avec des bulles"
-              />
-            </div>
-            <PratiqueParagraph>
-              <h3 className="text-lg font-semibold">Enfants</h3>
-              <p className="text-justify">
-                Que l&apos;enfant ait des difficultés dans l&apos;alimentation,
-                la propreté, les apprentissages ou le sommeil, ces soucis disent
-                quelque chose qu&apos;il ne peut pas forcément exprimer. Ce sont
-                les parents, l&apos;école (ou autre lieu de vie) qui, en
-                général, font remonter le problème.
-              </p>
-              <p className="text-justify">
-                Je reçois toujours l&apos;enfant avec les parents durant le
-                premier entretien car ils seront acteurs également dans le
-                processus de compréhension de ce qui ne va pas. Par la suite,
-                nous échangeons régulièrement ensemble et parfois sans
-                l&apos;enfant en fonction de ce que j&apos;observe de
-                l&apos;enfant et de sa problématique.
-              </p>
-              <p className="text-justify">
-                Lors des séances avec les enfants, j&apos;utilise les jeux, le
-                dessin et la parole pour qu&apos;ils arrivent à exprimer ce
-                qu&apos;ils ressentent. Je reçois également des enfants avec les
-                parents (ou l&apos;un des deux) lorsqu&apos;il faut travailler
-                sur la dynamique familiale ou conseiller sur des notions
-                éducatives.
-              </p>
-            </PratiqueParagraph>
+      <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-6 bg-gray-200 px-6 py-6 sm:px-8 md:flex-row md:items-center">
+          <div className="h-60 space-y-4 overflow-hidden rounded-md md:w-full">
+            <img
+              className="h-full w-full object-cover"
+              src={enfantImg}
+              alt="Photo d'une enfant jouant avec des bulles"
+            />
+            <img
+              className="h-full w-full object-cover"
+              src={enfantImg}
+              alt="Photo d'une enfant jouant avec des bulles"
+            />
           </div>
+
+          <PratiqueParagraph>
+            <h3 className="text-lg font-semibold">Enfants</h3>
+            <p className="text-justify">
+              Que l&apos;enfant ait des difficultés dans l&apos;alimentation, la
+              propreté, les apprentissages ou le sommeil, ces soucis disent
+              quelque chose qu&apos;il ne peut pas forcément exprimer. Ce sont
+              les parents, l&apos;école (ou autre lieu de vie) qui, en général,
+              font remonter le problème.
+            </p>
+            <p className="text-justify">
+              Je reçois toujours l&apos;enfant avec les parents durant le
+              premier entretien car ils seront acteurs également dans le
+              processus de compréhension de ce qui ne va pas. Par la suite, nous
+              échangeons régulièrement ensemble et parfois sans l&apos;enfant en
+              fonction de ce que j&apos;observe de l&apos;enfant et de sa
+              problématique.
+            </p>
+            <p className="text-justify">
+              Lors des séances avec les enfants, j&apos;utilise les jeux, le
+              dessin et la parole pour qu&apos;ils arrivent à exprimer ce
+              qu&apos;ils ressentent. Je reçois également des enfants avec les
+              parents (ou l&apos;un des deux) lorsqu&apos;il faut travailler sur
+              la dynamique familiale ou conseiller sur des notions éducatives.
+            </p>
+          </PratiqueParagraph>
         </div>
-        <div className="xl:flex">
+
+        {/* <div className="xl:flex">
           <div className="space-y-4 py-6 md:space-y-0 xl:mx-auto">
             <div className="clip-right md:clip-md-right h-60 w-full sm:h-72 md:float-right md:h-[400px] md:w-96 lg:w-2xl">
               <img
@@ -117,7 +121,7 @@ export function PratiqueSection() {
               </p>
             </PratiqueParagraph>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
