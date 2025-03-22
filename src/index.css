@@ -40,7 +40,8 @@
   transition-delay: 0s;
 }
 
-.card::before {
+.card::before,
+.card::after {
   content: "";
   position: absolute;
   inset: -3px;
@@ -52,13 +53,16 @@
 
 /* .card:hover, */
 .card:hover::before,
-.card:focus-visible::before,
-.card:focus-within::before {
+.card:hover::after {
   transition-delay: 0s;
 }
 
-.card:hover::before,
-.card:focus-within::before,
-.card:focus-visible::before {
-  --fill: 100%;
+.card:hover,
+.card:focus-within,
+.card:focus-visible {
+  --fill: 50%;
+}
+
+.card::after {
+  transform: rotateY(180deg);
 }
