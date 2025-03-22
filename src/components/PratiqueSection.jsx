@@ -22,6 +22,7 @@ export function PratiqueSection() {
                 className="h-full w-full object-cover lg:-translate-x-12"
                 src={enfantImg}
                 alt="Photo d'une enfant jouant avec des bulles"
+                loading="lazy"
               />
             </div>
             <PratiqueParagraph>
@@ -59,6 +60,7 @@ export function PratiqueSection() {
                 className="h-full w-full object-cover object-center sm:object-[position:50%_55%] md:translate-x-14 lg:translate-x-28 lg:object-[potision:0_75%]"
                 src={adoImg}
                 alt="Photo d'un adolescent appuyé sur un mur"
+                loading="lazy"
               />
             </div>
             <PratiqueParagraph>
@@ -93,6 +95,7 @@ export function PratiqueSection() {
                 className="h-full w-full object-cover md:-translate-x-16 md:object-right lg:-translate-x-42 lg:object-right-bottom"
                 src={adulteImg}
                 alt="Photo d'un homme assis"
+                loading="lazy"
               />
             </div>
             <PratiqueParagraph>
