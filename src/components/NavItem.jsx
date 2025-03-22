@@ -1,9 +1,9 @@
 export function NavItem({ name, href, setIsSidebarOpen }) {
   return (
-    <li className="text-center sm:text-start">
+    <li className="pr-8 pl-10 text-center sm:text-start lg:px-4">
       <a
         onClick={() => setIsSidebarOpen(false)}
-        className="block py-4 pr-8 pl-10 font-medium text-gray-700 decoration-emerald-950 underline-offset-4 transition-colors duration-100 hover:text-emerald-950 hover:underline lg:px-4 lg:py-3"
+        className="relative block py-4 font-medium text-gray-700 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-emerald-800 after:transition-[width] after:duration-300 hover:after:w-full focus:outline-none lg:py-3"
         href={href}
       >
         {name}
