@@ -39,10 +39,7 @@ function App() {
 
       <PratiqueSection />
       <AppointmentAndPriceSection />
-
-      <div className="mx-auto my-8 flex max-w-4xl flex-col gap-8 px-8">
-        <WebsitesCards />
-      </div>
+      <WebsitesCards />
 
       <Footer />
       <CustomModal

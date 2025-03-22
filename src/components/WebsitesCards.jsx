@@ -26,13 +26,13 @@ const websites = [
 
 export function WebsitesCards() {
   return (
-    <>
+    <div className="mx-auto my-8 flex max-w-4xl flex-col gap-8 px-8">
       <p>Vous pouvez également me retrouver sur les sites suivants :</p>
-      <div className="mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row md:mx-0 md:justify-center md:gap-12">
+      <div className="mx-auto flex flex-col items-center justify-center gap-4 md:mx-0 md:flex-row md:justify-center md:gap-12">
         {websites.map((website) => {
           return <WebsiteCard key={website.name} {...website} />;
         })}
       </div>
-    </>
+    </div>
   );
 }

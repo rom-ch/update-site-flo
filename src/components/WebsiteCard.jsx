@@ -4,7 +4,7 @@ export function WebsiteCard({ link, name, logo }) {
       href={link}
       target="_blank"
       key={name}
-      className="flex w-full shrink-0 items-center justify-center gap-2 rounded-lg border border-emerald-900/20 p-4 shadow-sm hover:bg-emerald-700/10 sm:w-auto"
+      className="card relative flex w-46 items-center justify-center gap-2 rounded-lg border border-emerald-900/20 bg-zinc-50 p-4 focus:outline-none"
     >
       <div>
         <img src={logo} alt={`Logo ${name}`} className="w-6" />

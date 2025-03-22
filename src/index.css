@@ -29,3 +29,36 @@
 .padding-safe {
   padding-bottom: env(safe-area-inset-bottom);
 }
+
+@property --fill {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+.card {
+  transition-delay: 0s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  z-index: -1;
+  background: conic-gradient(#006045 var(--fill), transparent var(--fill));
+  transition: --fill 0.6s 0.3s linear;
+}
+
+/* .card:hover, */
+.card:hover::before,
+.card:focus-visible::before,
+.card:focus-within::before {
+  transition-delay: 0s;
+}
+
+.card:hover::before,
+.card:focus-within::before,
+.card:focus-visible::before {
+  --fill: 100%;
+}
