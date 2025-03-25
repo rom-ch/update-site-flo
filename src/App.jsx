@@ -29,14 +29,6 @@ function App() {
       <Nav setIsModalFormOpen={setIsModalFormOpen} />
       <HeroSection setIsModalFormOpen={setIsModalFormOpen} />
 
-      <div className="mx-auto my-8 flex max-w-4xl flex-col gap-8 px-8">
-        <p className="text-justify sm:text-left">
-          Vous trouverez sur ce site les informations importantes relatives à la
-          consultation psychologique ainsi que l&apos;emplacement du cabinet et
-          les tarifs de consultation.
-        </p>
-      </div>
-
       <PratiqueSection />
       <AppointmentAndPriceSection />
       <WebsitesCards />
