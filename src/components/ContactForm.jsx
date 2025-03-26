@@ -1,5 +1,6 @@
 import { Button } from "./Button";
 import { FormGroup } from "./FormGroup";
+import { InputError } from "./InputError";
 import { InputText } from "./InputText";
 import { Label } from "./Label";
 
@@ -12,6 +13,19 @@ import { Label } from "./Label";
 export function ContactForm({ onClose, setFormSubmitted }) {
   function handleSubmit(e) {
     e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData);
+    const formattedData = {
+      Nom: `${data.lastname} ${data.firstname}`,
+      Email: data.email,
+      Objet: data.object,
+      Message: data.message,
+    };
+    console.log(formattedData);
+
+    setFormSubmitted(true);
+    onClose();
   }
 
   return (
@@ -24,14 +38,26 @@ export function ContactForm({ onClose, setFormSubmitted }) {
           <Label htmlFor="lastname" required>
             Nom
           </Label>
-          <InputText id="lastname" name="Nom" />
+          <InputText
+            id="lastname"
+            placeholder="Votre Nom"
+            required
+            errorMessage="Nom requis"
+            minLength="2"
+          />
         </FormGroup>
 
         <FormGroup>
           <Label htmlFor="firstname" required>
             Prénom
           </Label>
-          <InputText id="firstname" name="Prénom" />
+          <InputText
+            id="firstname"
+            placeholder="Votre Prénom"
+            required
+            errorMessage="Prénom requis"
+            minLength="2"
+          />
         </FormGroup>
       </div>
 
@@ -42,31 +68,34 @@ export function ContactForm({ onClose, setFormSubmitted }) {
         <InputText
           type="email"
           id="email"
-          name="E-mail"
           placeholder="Votre E-mail"
           required
+          errorMessage="L'e-mail renseigné n'est pas valide"
         />
-        <p className="absolute -bottom-6 hidden text-sm text-red-400 peer-[:not(:placeholder-shown):invalid]:block">
-          Please provide a valid email
-        </p>
       </FormGroup>
 
       <FormGroup>
         <Label htmlFor="object">Objet</Label>
-        <InputText id="object" name="Objet" />
+        <InputText id="object" name="Objet" placeholder="Objet" />
       </FormGroup>
 
       <FormGroup>
         <Label htmlFor="message" required>
           Message
         </Label>
-        <textarea
-          name="Message"
-          id="message"
-          className={`flex h-36 resize-none items-center gap-3 rounded-md px-6 py-2.5 text-lg ring ring-zinc-400 focus:outline-none sm:h-28`}
-        />
+        <div className="relative">
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Votre message..."
+            required
+            minLength="5"
+            className={`peer flex h-36 w-full resize-none items-center gap-3 rounded px-6 py-1.5 pr-8 pl-3 ring ring-zinc-400 placeholder:text-sm not-placeholder-shown:valid:bg-green-50 not-placeholder-shown:valid:ring-green-600 not-placeholder-shown:invalid:bg-red-50 not-placeholder-shown:invalid:ring-red-400 focus:ring-sky-600 focus:outline-none sm:h-28 sm:py-2 sm:pl-3`}
+          />
+          <InputError errorMessage="Message requis" />
+        </div>
       </FormGroup>
-      <Button type="submit" size="lg" width="full" className="mt-6">
+      <Button type="submit" size="lg" width="full" className="mt-8">
         Envoyer
       </Button>
     </form>

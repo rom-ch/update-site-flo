@@ -10,7 +10,7 @@ export function Button({
   type = "button",
 }) {
   const baseStyles =
-    "cursor-pointer rounded-md block font-medium bg-emerald-800 font-medium text-zinc-50  hover:bg-emerald-700 transition-transform duration-150 active:scale-95 hover:scale-105";
+    "cursor-pointer rounded-md block font-medium bg-emerald-800 font-medium text-zinc-50  hover:bg-emerald-700 transition-transform duration-150 active:scale-99 hover:scale-101";
 
   const sizeStyle = {
     sm: "px-3 py-1",
