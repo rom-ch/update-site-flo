@@ -7,7 +7,7 @@ export function Presentation() {
         Présentation
       </h2>
       <div className="overflow-hidden rounded shadow-md">
-        <img src={profilPicture} alt="Photo de Florent Chauvin" />
+        {/* <img src={profilPicture} alt="Photo de Florent Chauvin" /> */}
       </div>
       <div></div>
     </section>
