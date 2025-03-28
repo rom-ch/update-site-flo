@@ -7,6 +7,7 @@ import { FormSuccessMessage } from "./components/FormSuccessMessage";
 import { HeroSection } from "./components/HeroSection";
 import { Nav } from "./components/Nav";
 import { PratiqueSection } from "./components/PratiqueSection";
+import { Presentation } from "./components/Presentation";
 import { WebsitesCards } from "./components/WebsitesCards";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
     <>
       <Nav setIsModalFormOpen={setIsModalFormOpen} />
       <HeroSection setIsModalFormOpen={setIsModalFormOpen} />
+      <Presentation />
 
       <PratiqueSection />
       <AppointmentAndPriceSection />

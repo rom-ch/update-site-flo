@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { Button } from "./Button";
 import { FormGroup } from "./FormGroup";
 import { InputError } from "./InputError";
@@ -11,6 +12,15 @@ import { Label } from "./Label";
 // };
 
 export function ContactForm({ onClose, setFormSubmitted }) {
+  const formRef = useRef(null);
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  const checkFormValidity = () => {
+    if (formRef.current) {
+      setIsFormValid(formRef.current.checkValidity());
+    }
+  };
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -22,14 +32,13 @@ export function ContactForm({ onClose, setFormSubmitted }) {
       Objet: data.object,
       Message: data.message,
     };
-    console.log(formattedData);
 
     setFormSubmitted(true);
     onClose();
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} ref={formRef} onChange={checkFormValidity}>
       <h1 className="mb-6 text-2xl font-bold text-emerald-950 sm:mb-8 sm:text-3xl">
         Me contacter
       </h1>
@@ -95,7 +104,13 @@ export function ContactForm({ onClose, setFormSubmitted }) {
           <InputError errorMessage="Message requis" />
         </div>
       </FormGroup>
-      <Button type="submit" size="lg" width="full" className="mt-8">
+      <Button
+        type="submit"
+        size="lg"
+        width="full"
+        className="mt-8"
+        disabled={!isFormValid}
+      >
         Envoyer
       </Button>
     </form>

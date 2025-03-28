@@ -12,6 +12,7 @@ export function HeroSection({ setIsModalFormOpen }) {
           className="h-full w-full object-cover"
           src={heroImage}
           alt="Conversation between a psychologist and a patient"
+          loading="lazy"
         />
       </div>
       <div className="relative z-1 flex max-w-3/4 flex-col gap-4 text-zinc-50 sm:max-w-2/3 md:max-w-1/2 lg:max-w-[500px]">

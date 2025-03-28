@@ -10,7 +10,7 @@ export function Button({
   type = "button",
 }) {
   const baseStyles =
-    "cursor-pointer rounded-md block font-medium bg-emerald-800 font-medium text-zinc-50  hover:bg-emerald-700 transition-transform duration-150 active:scale-99 hover:scale-101";
+    "rounded-md block font-medium bg-emerald-800 font-medium text-zinc-50";
 
   const sizeStyle = {
     sm: "px-3 py-1",
@@ -24,7 +24,10 @@ export function Button({
     lg: "text-lg",
   };
 
-  const disabledStyles = disabled ? "opacity-50 cursor-not-allowed" : "";
+  const disabledStyles = disabled
+    ? "opacity-50 cursor-not-allowed"
+    : "cursor-pointer transition-transform duration-150 active:scale-99 hover:scale-101 hover:bg-emerald-700";
+
   const widthStyles = {
     fit: "mx-auto",
     full: "w-full",
@@ -32,7 +35,7 @@ export function Button({
 
   return (
     <button
-      className={`${baseStyles} ${sizeStyle[size]} ${textStyle[text]} ${disabledStyles} ${widthStyles[width]} ${className}`}
+      className={`${disabledStyles} ${baseStyles} ${sizeStyle[size]} ${textStyle[text]} ${widthStyles[width]} ${className}`}
       disabled={disabled}
       onClick={onClick}
       ref={ref}
