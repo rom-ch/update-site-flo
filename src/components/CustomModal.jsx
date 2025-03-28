@@ -38,7 +38,7 @@ export function CustomModal({ isOpen, onClose, children }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="safe-padding absolute top-1/2 h-fit max-h-[80dvh] w-[90%] max-w-[400px] -translate-y-1/2 overflow-y-auto rounded-xl bg-zinc-50 p-6 sm:mx-10 sm:max-w-xl"
+        className="safe-padding absolute top-1/2 h-fit max-h-[90dvh] w-[90%] max-w-[400px] -translate-y-1/2 overflow-y-auto rounded-xl bg-zinc-50 p-6 sm:mx-10 sm:max-w-xl"
       >
         <button
           onClick={onClose}
